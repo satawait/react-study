@@ -19,6 +19,7 @@ class Test extends React.Component {
     }
     static getDerivedStateFromProps (props, state) {
         console.log('getDerivedStateFromProps', props, state)
+        return state
     }
     shouldComponentUpdate (nextProps, nextState) {
         console.log('shouldComponentUpdate', nextProps, nextState)

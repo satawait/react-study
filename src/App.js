@@ -2,6 +2,7 @@ import React, { createRef } from 'react'
 import Child from './components/Child'
 import context from './context/context'
 import Test from "./Test"
+import Hooks from "./components/Hooks"
 const songs = [{
   id: 1, name: 'test1'
 }, {
@@ -61,6 +62,7 @@ class App extends React.Component {
   render () {
     return (
       <Provider value={this.state.message}>
+        <Hooks count={20} />
         <Test />
         <Child addCount={this.addCount} count={this.state.count} clickHello={clickHello} grandChild={<div>孙子元素</div>} />
         <Hello />
